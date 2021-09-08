@@ -39,7 +39,7 @@ services:
     container_name: cbioportal-session-container
     environment:
       SERVER_PORT: 5000
-      JAVA_OPTS: -Dspring.data.mongodb.uri=mongodb://cbioportal-session-database:27017/session-service-Dspring.security.user.name=$(USER_NAME) -Dspring.security.user.password=$(USER_PASSWORD)
+      JAVA_OPTS: -Dspring.data.mongodb.uri=mongodb://cbioportal-session-database:27017/session-service-Dspring.security.user.name=${USER_NAME} -Dspring.security.user.password=${USER_PASSWORD}
     depends_on:
       - cbioportal-session-database
     networks:
